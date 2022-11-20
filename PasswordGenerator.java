@@ -3,9 +3,24 @@ import java.util.Random;
 
 public class PasswordGenerator {
 	
+	/*
+	 * method used to randomly generate 
+	 * lower/upper case letter or number
+	 */
+	public static char AsciiGenerator() {
+		Random rand = new Random();
+		int y = rand.nextInt(58) + 65; //65 - 122 
+		
+		if (y == 91 || y == 92 || y == 93 || y == 94 || y == 95 || y == 96) { //91 - 96
+			int x = rand.nextInt(10) + 48; //48 - 57
+			return (char)x;
+		} else {
+			return (char)y;
+		}
+	}
+	
 	public static void main(String[] args) {
 		
-	
 		ArrayList<Character> arr = new ArrayList<>();
 		String password = new String();
 
@@ -29,21 +44,5 @@ public class PasswordGenerator {
 			password += x;
 		}
 		System.out.println(password);
-	}
-	
-	/*
-	 * method used to randomly generate 
-	 * lower/upper case letter or number
-	 */
-	public static char AsciiGenerator() {
-		Random rand = new Random();
-		int y = rand.nextInt(58) + 65; //65 - 122 
-		
-		if (y == 91 || y == 92 || y == 93 || y == 94 || y == 95 || y == 96) { //91 - 96
-			int x = rand.nextInt(10) + 48; //48 - 57
-			return (char)x;
-		}else {
-			return (char)y;
-		}
 	}
 }
