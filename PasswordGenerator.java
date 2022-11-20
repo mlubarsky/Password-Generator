@@ -14,8 +14,8 @@ public class PasswordGenerator {
 		/*
 		 * format: xxxxxx-xxxxxx-xxxxxx
 		 */
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 6; j++) {
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 6; j++) {
 				arr.add(AsciiGenerator());
 			}
 		}
@@ -25,10 +25,9 @@ public class PasswordGenerator {
 		/*
 		 * converts the array into a string
 		 */
-		for(Character x : arr) {
+		for (Character x : arr) {
 			password += x;
 		}
-		
 		System.out.println(password);
 	}
 	
@@ -40,7 +39,7 @@ public class PasswordGenerator {
 		Random rand = new Random();
 		int y = rand.nextInt(58) + 65; //65 - 122 
 		
-		if(y == 91 || y == 92 || y == 93 || y == 94 || y == 95 || y == 96) { //91 - 96
+		if (y == 91 || y == 92 || y == 93 || y == 94 || y == 95 || y == 96) { //91 - 96
 			int x = rand.nextInt(10) + 48; //48 - 57
 			return (char)x;
 		}else {
