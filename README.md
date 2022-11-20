@@ -1,4 +1,4 @@
-# Wordle
+# Password Generator
 Maxwell Lubarsky
 5/27/2022
 Version 1.0.0
